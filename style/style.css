@@ -32,7 +32,12 @@ h2 {
     text-align: start;
     background-color: #cff4fc;
     padding: 1em;
+    margin-bottom: 1em;
     font-weight: 300;
+}
+
+.controllo-riuscito {
+    background-color: #cffcd3;
 }
 
 .box-password {
@@ -77,4 +82,8 @@ h4 {
 
 .invia {
     background-color: #0c6efd;
+}
+
+.password {
+    color: cornflowerblue;
 }

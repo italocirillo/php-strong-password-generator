@@ -1,21 +1,6 @@
 <?php
-$caratteri = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '?', '!', '£', '$', '€', '*', '#', '@', '(', ')', '[', ']', '{', '}'];
-
-if (isset($_GET["lunghezza_password"])) {
-    $lunghezza = $_GET["lunghezza_password"];
-    $password = genera_password($lunghezza, $caratteri);
-}
-
-function genera_password($lunghezza, $caratteri)
-{
-    $password = "";
-    $indice_casuale = 0;
-    for ($i = 0; $i < $lunghezza; $i++) {
-        $indice_casuale = rand(0, count($caratteri) - 1);
-        $password .= $caratteri[$indice_casuale];
-    }
-    return $password;
-}
+include __DIR__ . "/dati.php";
+include_once __DIR__ . "/function.php";
 ?>
 
 <!DOCTYPE html>
@@ -38,9 +23,15 @@ function genera_password($lunghezza, $caratteri)
     <div class="container">
         <h1>Strong Password Generator</h1>
         <h2>Genera una password sicura</h2>
-        <div class="controllo">
-            <p>Nessun parametro valido inserito</p>
-        </div>
+        <?php if (empty($password)) { ?>
+            <div class="controllo">
+                <p>Nessun parametro valido inserito</p>
+            </div>
+        <?php } else { ?>
+            <div class="controllo controllo-riuscito">
+                <p>Password generata</p>
+            </div>
+        <?php } ?>
         <div class="box-password" method="GET">
             <form action="index.php">
                 <div class="informazioni-passord">
@@ -51,7 +42,7 @@ function genera_password($lunghezza, $caratteri)
                         <input type="number" name="lunghezza_password" id="lunghezza-password" min=0 max=26>
                     </div>
                 </div>
-                <h4>password: <?php echo $password ?? isset($_GET["lunghezza_password"]) ?></h4>
+                <h4>password: <span class="password"><?php echo $password ?? isset($_GET["lunghezza_password"]) ?></span> </h4>
                 <button type="submit" class="invia">Invia</button>
                 <button type="reset">Annulla</button>
             </form>
