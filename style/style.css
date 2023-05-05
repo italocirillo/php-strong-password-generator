@@ -37,5 +37,39 @@ h2 {
 
 .box-password {
     text-align: start;
-    background-color: rgb(228, 226, 226);
+    background-color: white;
+    padding: 1em;
+}
+
+.informazioni-passord {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sezione-label {
+    width: 50%;
+}
+
+.sezione-input {
+    width: 50%;
+}
+
+input {
+    padding: 1em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    background-color: gray;
+    padding: 0.8em;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.invia {
+    background-color: #0c6efd;
 }

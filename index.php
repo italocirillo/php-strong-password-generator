@@ -21,9 +21,18 @@
         <div class="controllo">
             <p>Nessun parametro valido inserito</p>
         </div>
-        <div class="box-password">
+        <div class="box-password" method="GET">
             <form action="index.php">
-
+                <div class="informazioni-passord">
+                    <div class="sezione-label">
+                        <label for="lunghezza-password">Lunghezza Password:</label>
+                    </div>
+                    <div class="sezione-input">
+                        <input type="text" name="lunghezza-password" id="lunghezza-password">
+                    </div>
+                </div>
+                <button type="submit" class="invia">Invia</button>
+                <button type="reset">Annulla</button>
             </form>
         </div>
     </div>
