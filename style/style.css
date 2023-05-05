@@ -1,0 +1,41 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001632;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 3em 1em;
+    width: 80%;
+}
+
+h1 {
+    color: gray;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: rgb(228, 226, 226);
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 0.2em 0em;
+}
+
+.controllo {
+    text-align: start;
+    background-color: #cff4fc;
+    padding: 1em;
+    font-weight: 300;
+}
+
+.box-password {
+    text-align: start;
+    background-color: rgb(228, 226, 226);
+}
