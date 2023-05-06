@@ -34,7 +34,7 @@ include_once __DIR__ . "/function.php";
                         <p>Consenti ripetizioni di uno o più caratteri:</p>
                     </div>
                     <div class="sezione-input">
-                        <input type="number" name="lunghezza_password" id="lunghezza-password" min=0 max=26>
+                        <input type="number" name="lunghezza_password" id="lunghezza-password" min=1 max=26>
                         <div>
                             <input type="radio" name="ripeti_carattere" id="ripeti-carattere" value="1" checked>
                             <label for="ripeti-carattere">SI</label>
