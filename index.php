@@ -28,12 +28,35 @@ include_once __DIR__ . "/function.php";
         </div>
         <div class="box-password" method="GET">
             <form action="password.php">
-                <div class="informazioni-passord">
+                <div class="informazioni-password">
                     <div class="sezione-label">
-                        <label for="lunghezza-password">Lunghezza Password:</label>
+                        <label class="info-label" for="lunghezza-password">Lunghezza Password:</label>
+                        <p>Consenti ripetizioni di uno o più caratteri:</p>
                     </div>
                     <div class="sezione-input">
                         <input type="number" name="lunghezza_password" id="lunghezza-password" min=0 max=26>
+                        <div>
+                            <input type="radio" name="ripeti_carattere" id="ripeti-carattere" value="1">
+                            <label for="ripeti-carattere">SI</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="ripeti_carattere" id="non-ripeti-carattere" value="0">
+                            <label for="non-ripeti-carattere">No</label>
+                        </div>
+                        <div class="filtri">
+                            <div>
+                                <input type="checkbox" name="lettere" id="lettere" checked>
+                                <label for="lettere">Lettere</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="numeri" id="numeri" checked>
+                                <label for="numeri">Numeri</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="simboli" id="simboli" checked>
+                                <label for="simboli">Simboli</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button type="submit" class="invia">Invia</button>

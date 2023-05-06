@@ -52,23 +52,33 @@ h2 {
     padding: 1em;
 }
 
-.informazioni-passord {
+.informazioni-password {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .sezione-label {
     width: 50%;
 }
 
+.sezione-label p {
+    padding: 1em 0em;
+}
+
 .sezione-input {
     width: 50%;
 }
 
-input {
+.info-label {
+    display: block;
+    padding: 2.5em 0em 2em;
+}
+
+.sezione-input>input {
     width: 50%;
     padding: 1em;
+    margin: 2em 0em;
     border: 1px solid lightgray;
     border-radius: 5px;
 }
@@ -101,4 +111,8 @@ h4 {
 button a {
     text-decoration: none;
     color: white;
+}
+
+.filtri {
+    padding: 1em 0em 4em;
 }

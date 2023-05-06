@@ -23,13 +23,19 @@ include_once __DIR__ . "/function.php";
     <div class="container">
         <h1>Strong Password Generator</h1>
         <h2>Genera una password sicura</h2>
-        <div class="controllo controllo-riuscito">
-            <p>Password generata</p>
-        </div>
+        <?php if (!empty($_SESSION['password'])) { ?>
+            <div class="controllo controllo-riuscito">
+                <p>Password generata</p>
+            </div>
+        <?php } else { ?>
+            <div class="controllo">
+                <p>Nessun parametro valido inserito</p>
+            </div>
+        <?php } ?>
         <div class="box-password-trovata" method="GET">
             <h4>PASSWORD:</h4>
             <h4 class="password"><?php echo $_SESSION['password'] ?></h4>
-            <button class="home"><a href="index.php">Home</a></button>
+            <a href="index.php"><button class="home">Home</button></a>
         </div>
     </div>
 </body>
